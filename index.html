@@ -18,23 +18,24 @@
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
    <div class="wrapper">
-     <nav class="clearfix">
-       <a id="logo" href="#">E</a>
+     <div class="topnav">
        <a href="#about">About</a>
        <a href="#projects">Projects</a>
        <a href="/">Resume</a>
        <a href="#connect">Connect</a>
-     </nav>
+     </div>
 
     <hr id="header">
+    <div id="logo">E</div>
 
+    <div class="topwrapper">
      <header>
        <h1>Emilee Reichenbach</h1>
        <h3>Front-end Developer</h3>
      </header>
-
+    </div>
     <hr>
-
+    <a name="about"></a>
     <div class="about">
       <h2>About Me</h2>
       <p>
@@ -64,14 +65,48 @@
 
     <hr>
 
+    <a name="projects"></a>
     <div class="projects">
       <h2>Projects</h2>
-      <a href="/lsystemgenerator.png"><img src="" alt="L-System Generator image"></a>
-      <a href="#"><img src="" alt="Foundations of HCI Usability class project image"></a>
+      <div class="projectwrapper">
+      <a href="https://emileerei.github.io/LSystemGenerator"><img src="/assets/lsystemgenerator.png" alt="L-System Generator image"></a>
+      <div class="projectdesc">
+        <h4>L-System Generator</h4>
+        
+        A simple L-System Generator created for my Computer Graphics final project. The goal of the project was to use our
+        knowledge WebGL and 3D graphics to create something interesting.
+        </br>
+        <ul id="project">
+          <lh>Skills Used:</lh>
+          <li>JavaScript</li>
+          <li>HTML/CSS</li>
+        </ul>
+
+      </div>
+      </div>
+  
+      <div class="projectwrapper">
+      <a href="#"><img src="/assets/formproject.png" alt="Foundations of HCI Usability class project image"></a>
+      <div class="projectdesc">
+        <h4>Form Redesign</h4>
+        
+        For our Foundations of Human Computer Interaction Usability class, we were tasked to conduct user research on the
+        usability of our university’s Office of the Registrar forms. We then redesigned the forms to create a more positive user
+        experience.
+        </br>
+        <ul id="project">
+          <lh>Skills Used:</lh>
+          <li>Adobe Photoshop</li>
+          <li>User Research</li>
+          <li>A/B Testing</li>
+        </ul>
+      </div>
+      </div>
     </div>
 
     <hr>
 
+    <a name="connect"></a>
     <div class="connect">
       <h2>Connect With Me</h2>
       <ul id="contact">
@@ -83,8 +118,6 @@
     </div>
 
    </div>
-
-    <a href="https://emileerei.github.io/LSystemGenerator"> Here is a project I did about L-Systems. </a>
     
     <script src="" async defer></script>
   </body>
