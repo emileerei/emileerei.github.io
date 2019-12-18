@@ -1,53 +1,216 @@
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+* { box-sizing: border-box; }
+
+.grid-item {
+  display: flex;
+}
+
+:root {
+  --header-color: white;
+}
+
 body {
-  margin: 0;
-  font-family: 'Lato';
-  padding: 2em;
-  background: white;
-}
-
-.container {
-  width: 80%;
   margin: 0 auto;
-}
-
-.info {
-  display: grid;
-  grid-template-columns: repeat(3, auto);
-  grid-gap: 4em;
-  margin-top: 2em;
-}
-
-.projects {
-  display: grid;
-  grid-template-columns: repeat(2, auto);
-  grid-gap: 4em;
-  margin-top: 2em;
-}
-
-.aboutcard {
+  padding: 0;
+  font-family: 'Lato';
+  font-size: 18px;
+  text-align: center;
   background: white;
-  padding: 1.5em;
-  border-radius: .4em;
-  box-shadow:
-    0 3.1px 2.2px rgba(115, 48, 91, 0.07),
-    0 5.3px 6.3px rgba(115, 48, 91, 0.046),
-    0 7.7px 14.4px rgba(115, 48, 91, 0.044),
-    0 17px 42px rgba(115, 48, 91, 0.04)
-  ;
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: repeat(5, auto);
+  grid-template-areas: 
+    "header"
+    "project"
+    "about"
+    "contact"
+    "footer"; 
 }
 
-.projectcard {
-  background: white;
-  padding: 1.5em;
-  border-radius: .4em;
-  box-shadow:
-    0 3.1px 2.2px rgba(115, 48, 91, 0.07),
-    0 5.3px 6.3px rgba(115, 48, 91, 0.046),
-    0 7.7px 14.4px rgba(115, 48, 91, 0.044),
-    0 17px 42px rgba(115, 48, 91, 0.04)
-  ;
+h2 {
+  text-transform: uppercase;
+  font-size: 40px;
+  letter-spacing: 2.5px;
+  text-align: center;
+  color: white;
 }
 
-.projectcard img {
-  max-width: 400px;
+h3 {
+  text-transform: uppercase;
+  font-size: 30px;
+  letter-spacing: 2.5px;
+  text-align: center;
+}
+
+/* Header */
+header {
+  grid-area: header;
+  background: linear-gradient(
+      rgba(39, 38, 64, 0.65), 
+      rgba(39, 38, 64, 0.65)
+    ),
+    url('/images/backgroundimg.jpeg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: linear-gradient(
+      rgb(39, 38, 64),
+      rgb(115, 48, 91)); 
+}
+
+/* Logo design */
+#logo {
+  color: var(--header-color);
+  font-family: 'Leckerli One';
+  font-size: 40px;
+  text-decoration: none;
+  float: left;
+  display: block;
+  position: absolute;
+  margin-top: 0.5em;
+  margin-left: 0.9em;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+} 
+
+#logo:hover {
+  color: #BF8097;
+  text-decoration: none;
+  -webkit-transform: scale(1.08);
+  -moz-transform: scale(1.08);
+  -o-transform: scale(1.08);
+  transform: scale(1.08);
+} 
+
+header[role="banner"] {
+  width: 100%;
+}
+
+header[role="banner"] nav {
+  float: right;
+}
+
+/* Top navigation */
+#top-nav ul {
+  list-style: none;
+  margin-top: 1.5em;
+  margin-right: 1.5em;
+}
+
+#top-nav ul li {
+  padding: .8em;
+  float: left;
+}
+
+#top-nav a {
+  color: var(--header-color);
+  text-align: center;
+  padding-bottom: .3em;
+  text-decoration: none;
+  text-transform: uppercase;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  border-bottom: 3px solid transparent;
+}
+
+#top-nav a:hover {
+  border-bottom: 3px solid #BF8097;
+}
+
+/* Title Content */
+#head {
+  padding: 11em 0;
+}
+
+#head h1 {
+  text-transform: uppercase;
+  font-size: 45px;
+  color: var(--header-color);
+  letter-spacing: 2.5px;
+}
+
+#head p {
+  width: 70%;
+  margin: 0 auto;
+  color: var(--header-color);
+  font-size: 20px;
+}
+
+/* Project Section */
+main {
+  grid-area: project;
+  padding: 50px;
+  padding-bottom: 70px;
+  background-color: rgb(39, 38, 64);
+}
+
+/* About Section */
+section#about {
+  grid-area: about;
+  padding: 50px;
+  padding-bottom: 70px;
+  background-color: rgb(115, 48, 91);
+  color: white;
+  text-align: center;
+}
+
+.card {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-auto-rows: auto;
+  grid-gap: 10px;
+  padding: 10px;
+  background-color: white;
+  color: black;
+}
+
+.card ul {
+  list-style: none;
+  text-align: left;
+}
+
+/* Contact Section */
+section#contact {
+  grid-area: contact;
+  padding: 50px;
+  padding-bottom: 70px;
+  background-color: rgb(166, 88, 124);
+  color: white;
+}
+
+section#contact ul {
+  list-style: none;
+  text-transform: uppercase;
+  padding: 20px;
+  margin: auto;
+}
+
+section#contact ul li {
+  float: left;
+}
+
+section#contact ul li:not(:last-child):after {
+  content: '|';
+  position: relative; 
+  padding: 0 10px 0 10px;
+  opacity: 0.3;
+  color: #fff;
+}
+
+/* Footer */
+footer {
+  grid-area: footer;
+  padding: 1.5em;
+  text-align: center;
+  background-color: rgb(191, 128, 151);
+  color: white;
 }
