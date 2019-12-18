@@ -93,12 +93,11 @@ header {
 } 
 
 #logo:hover {
-  color: #BF8097;
   text-decoration: none;
-  -webkit-transform: scale(1.08);
-  -moz-transform: scale(1.08);
-  -o-transform: scale(1.08);
-  transform: scale(1.08);
+  -webkit-transform: scale(1.08) rotate(-15deg);
+  -moz-transform: scale(1.08) rotate(-15deg);
+  -o-transform: scale(1.08) rotate(-15deg);
+  transform: scale(1.08) rotate(-15deg);
 } 
 
 header[role="banner"] {
@@ -135,7 +134,7 @@ header[role="banner"] nav {
 }
 
 #top-nav a:hover {
-  border-bottom: 3px solid #BF8097;
+  border-bottom: 3px solid rgb(191, 128, 151);
 }
 
 /* Title Content */
@@ -250,7 +249,22 @@ section#contact ul li:not(:last-child):after {
   position: relative; 
   padding: 0 10px 0 10px;
   opacity: 0.3;
-  color: #fff;
+  color: white;
+}
+
+section#contact a {
+  text-decoration: none;
+  color: white;
+  padding-bottom: .3em;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  border-bottom: 3px solid transparent;
+}
+
+section#contact a:hover {
+  border-bottom: 3px solid rgb(39, 38, 64);
 }
 
 /* Footer */
