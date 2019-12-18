@@ -28,8 +28,8 @@
       
       <nav id="top-nav" role="navigation">
         <ul>
-          <li><a href="#about">About</a></li>
           <li><a href="#projects">Projects</a></li>
+          <li><a href="#about">About</a></li>
           <li><a href="/">Resume</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
@@ -42,12 +42,52 @@
         <p>*Insert witty catchphrase*</p>
       </div>
     </header>
+
     <main>
     <a name="projects"></a>
     <!-- Projects -->
       <h2>Projects</h2>
       <!-- Project image // Project Description -->
+      <div class="grid-container" id="projects">
+        <!-- Project 1 -->
+        <div class="card">
+          <img src="images/lsystemgenerator.png" alt="Simple L-System Generator screenshot" />
+        </div>
+        <div class="card" id="projects">
+          <h4>Simple L-System Generator</h4>
+          <p>
+            A simple L-System Generator created for my Computer Graphics final project. The goal of the project was to use our
+            knowledge WebGL and 3D graphics to create something interesting.
+          </p>
+          <br />
+          <h4>Skills Used:</h4>
+          <ul id="pr">
+            <li>JavaScript</li>
+            <li>HTML/CSS</li>
+          </ul>
+        </div>
 
+        <!-- Project 2 -->
+        <div class="card" id="projects">
+          <img src="images/formproject.png" alt="Form Redesign screenshot" />
+        </div>
+        <div class="card">
+          <h4>University Form Design</h4>
+          <p>
+            For our Foundations of Human Computer Interaction Usability class, we were tasked to conduct user research on the
+            usability of our university’s Office of the Registrar forms. We then redesigned the forms to create a more positive
+            user
+            experience.
+          </p>
+          <br />
+          <h4>Skills Used:</h4>
+          <ul id="pr">
+            <li>Adobe Photoshop</li>
+            <li>User Research</li>
+            <li>A/B Testing</li>
+          </ul>
+        </div>
+      </div>
     </main>
 
     <section id="about">
@@ -58,34 +98,35 @@
       
     <!-- Skills -->
       <h3>Skills</h3>
-      <div class="card">
-        <div class="grid-item">
-        <!-- Dev -->
-        <h4>Development</h4>
-        <ul>
-          <li>HTML5/CSS3</li>
-          <li>Python</li>
-          <li>C++</li>
-          <li>MySQL</li>
-          <li>React.js</li>
-        </ul>
+      <div class="grid-container">
+        <div class="card">
+          <!-- Dev -->
+          <h4>Development</h4>
+          <ul>
+            <li>JavaScript</li>
+            <li>TypeScript</li>
+            <li>HTML5/CSS3</li>
+            <li>Python</li>
+            <li>C++</li>
+            <li>MySQL</li>
+            <li>React.js</li>
+          </ul>
         </div>
-      </div>
 
-      <div class="card">
-        <div class="grid-item">
-        <!-- Tools -->
-        <h4>Tools</h4>
-        <ul>
-          <li>Git/Github</li>
-          <li>Chrome Developer Tools</li>
-          <li>Google Suite</li>
-          <li>Adobe XD</li>
-          <li>Adobe Photoshop</li>
-        </ul>
+        <div class="card">
+          <!-- Tools -->
+          <h4>Tools</h4>
+          <ul>
+            <li>Git/Github</li>
+            <li>Chrome Developer Tools</li>
+            <li>Google Suite</li>
+            <li>Adobe XD</li>
+            <li>Adobe Photoshop</li>
+          </ul>
         </div>
       </div>
     </section>
+
     <section id="contact">
     <a name="contact"></a>
       <h2>Contact</h2>
