@@ -22,6 +22,11 @@
   --header-color: white;
 }
 
+a  {
+  text-decoration: none;
+  color: white;
+}
+
 body {
   margin: 0 auto;
   padding: 0;
@@ -86,18 +91,6 @@ header {
   position: absolute;
   margin-top: 0.5em;
   margin-left: 0.9em;
-  -webkit-transition: all 0.3s ease-in-out;
-  -moz-transition: all 0.3s ease-in-out;
-  -o-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
-} 
-
-#logo:hover {
-  text-decoration: none;
-  -webkit-transform: scale(1.08) rotate(-15deg);
-  -moz-transform: scale(1.08) rotate(-15deg);
-  -o-transform: scale(1.08) rotate(-15deg);
-  transform: scale(1.08) rotate(-15deg);
 } 
 
 header[role="banner"] {
@@ -159,6 +152,7 @@ header[role="banner"] nav {
 /* Project Section */
 main {
   grid-area: project;
+
   padding: 50px;
   padding-bottom: 70px;
   background: linear-gradient(
@@ -174,6 +168,8 @@ main {
 
 .card#projects {
   padding: 20px 30px 20px 30px;
+  max-width: 1000px;
+  display: inline-block;
 }
 
 .card#projects ul {
@@ -203,6 +199,7 @@ section#about {
   background-color: white;
   color: black;
   text-align: center;
+  max-width: 1000px;
 }
 
 .card ul {
@@ -217,8 +214,8 @@ section#about {
 
 .card img {
   min-width: 300px;
-  max-width: 400px;
-  max-height: 400px;
+  
+  max-height: 450px;
   margin-bottom: -.2em;
 }
 
@@ -265,6 +262,35 @@ section#contact a {
 
 section#contact a:hover {
   border-bottom: 3px solid rgb(39, 38, 64);
+}
+
+.button {
+  height: 50px;
+  width: 150px;
+  padding: 12px;
+  display: inline-block;
+  border-radius: 35px;
+  background-color: rgb(39, 38, 64);
+  color: white;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  text-transform: uppercase;
+}
+
+.button a{
+  color: white;
+  text-decoration: none;
+}
+
+.button:hover{
+  background-color:rgb(191, 128, 151);
+  color: white;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 
 /* Footer */
